@@ -1,0 +1,21 @@
+{
+  "name": "conciliacion-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "node": "hardhat node",
+    "setup": "hardhat run scripts/setup.js --network localhost",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "reset": "node scripts/reset.js",
+    "test": "hardhat test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0"
+  }
+}

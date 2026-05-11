@@ -1,0 +1,37 @@
+export const defaultConciliacion = {
+  id: "PGN-LAB-2024-0142",
+  fecha: "30 de marzo de 2026",
+  hora: "09:00",
+  estado: "listo",
+  step: 1,
+  bcState: null,
+  txHash: "",
+  hashActa: null,
+  montoETH: "0.1",
+  trabajador: {
+    nombre: "Carlos Alberto Mejía Ríos",
+    cc: "71.756.312",
+    correo: "carlos.mejia@correo.com",
+    cargo: "Maestro de Obra",
+    fechaIngreso: "15 de enero de 2021",
+    fechaRetiro: "10 de enero de 2024",
+    wallet: "",
+  },
+  empleador: {
+    nombre: "Construcciones Andina S.A.S.",
+    nit: "900.123.456-7",
+    correo: "construccionesandina@empresa.com.co",
+    wallet: "",
+  },
+  hechos:
+    "El señor Carlos Alberto Mejía Ríos laboró para Construcciones Andina S.A.S. desde el 15 de enero de 2021 hasta el 10 de enero de 2024, desempeñando el cargo de Maestro de Obra, con un salario mensual de $2.500.000. La terminación del contrato se realizó de manera unilateral por parte del empleador, sin que mediara justa causa comprobada.",
+  montos: {},
+  condiciones: {
+    conciliadorAddress: "",
+    lugarFirma: "Bogotá D.C.",
+    fechaPago: "2026-04-15",
+    fechaFirma: "2026-03-30",
+    modalidad: "unico",
+    numeroCuotas: "1",
+  },
+};

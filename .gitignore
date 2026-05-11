@@ -1,0 +1,32 @@
+node_modules
+frontend/node_modules
+.env
+.env.local
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Build outputs
+frontend/dist
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp/lock files de Office
+~$*
+
+# Claude Code config local (rutas específicas de esta máquina)
+.claude/settings.local.json
+
+# Agente embebido (repo git interno, no se transfiere correctamente)
+clo-author/
