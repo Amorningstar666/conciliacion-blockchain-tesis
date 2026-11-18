@@ -36,3 +36,12 @@ clo-author/
 *.docx
 *.pdf
 *.zip
+
+# Configuración de asistentes de IA (solo local)
+.claude/
+.agents/
+frontend/.claude/
+frontend/.agents/
+frontend/skills-lock.json
+CLAUDE.md
+memory/
