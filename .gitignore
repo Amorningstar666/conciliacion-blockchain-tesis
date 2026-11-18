@@ -30,3 +30,9 @@ Thumbs.db
 
 # Agente embebido (repo git interno, no se transfiere correctamente)
 clo-author/
+
+# Documentos: se mantienen solo en local, no se versionan
+*.doc
+*.docx
+*.pdf
+*.zip
