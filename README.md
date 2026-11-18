@@ -206,7 +206,7 @@ Este es un proyecto académico y demostrativo. Para cambios:
 
 ## 📝 Notas de Desarrollo
 
-- El smart contract **no requiere modificaciones** - la lógica es correcta
+- La lógica es correcta
 - El frontend utiliza wallets derivadas de PKs predefinidas
 - Estado sincronizado entre localStorage y blockchain
 - Sin dependencias de backend externo
