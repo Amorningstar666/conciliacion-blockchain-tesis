@@ -1,5 +1,7 @@
 # Conciliación Laboral Blockchain - PGN
 
+[![Pruebas del contrato](https://github.com/Amorningstar666/conciliacion-blockchain-tesis/actions/workflows/tests.yml/badge.svg)](https://github.com/Amorningstar666/conciliacion-blockchain-tesis/actions/workflows/tests.yml)
+
 Sistema de conciliación laboral basado en blockchain para la Procuraduría General de la Nación (PGN), Colombia. Implementa la Ley 2220/2022 y normativas del Código Sustantivo del Trabajo (CST).
 
 ## 📋 Descripción
