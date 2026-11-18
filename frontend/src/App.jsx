@@ -5,6 +5,7 @@ import ConciliadorDashboard from "./pages/ConciliadorDashboard";
 import EmpleadorDashboard from "./pages/EmpleadorDashboard";
 import TrabajadorDashboard from "./pages/TrabajadorDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import DemoBanner from "./components/ui/DemoBanner";
 
 function AppRouter() {
   const { role, login, loading } = useApp();
@@ -23,6 +24,7 @@ function AppRouter() {
 export default function App() {
   return (
     <BlockchainProvider>
+      <DemoBanner />
       <AppRouter />
     </BlockchainProvider>
   );

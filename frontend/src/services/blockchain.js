@@ -1,13 +1,20 @@
 import { ethers } from "ethers";
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from "../constants/contract";
+import { IS_DEMO_MODE } from "../constants/network";
+import { getDemoProvider } from "./demoChain";
 
 let _provider = null;
 let _signer = null;
 let _contract = null;
 
+// En la demo de GitHub Pages la red se prepara apenas carga la app.
+if (IS_DEMO_MODE) getDemoProvider().catch((e) => console.error("[Demo] Error iniciando la red:", e));
+
 export const blockchainService = {
   async connectWithPrivateKey(privateKey) {
-    _provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+    _provider = IS_DEMO_MODE
+      ? await getDemoProvider()
+      : new ethers.JsonRpcProvider("http://127.0.0.1:8545");
     await _provider.getBlockNumber();
     _signer = new ethers.Wallet(privateKey, _provider);
     const address = await _signer.getAddress();

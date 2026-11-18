@@ -4,6 +4,10 @@
 
 Sistema de conciliación laboral basado en blockchain para la Procuraduría General de la Nación (PGN), Colombia. Implementa la Ley 2220/2022 y normativas del Código Sustantivo del Trabajo (CST).
 
+**▶ Demo en línea:** https://amorningstar666.github.io/conciliacion-blockchain-tesis/
+
+La demo ejecuta el contrato real dentro del navegador (red EVM en memoria con las mismas cuentas de Hardhat), así que no requiere instalar nada. Los datos se reinician al recargar la página.
+
 ## 📋 Descripción
 
 Este proyecto proporciona una plataforma descentralizada para la conciliación de conflictos laborales en Colombia, utilizando blockchain para garantizar transparencia, inmutabilidad e igualdad entre las partes. El sistema está diseñado para gestionar actas de conciliación, depósitos en garantía y el flujo completo de resolución de disputas laborales.

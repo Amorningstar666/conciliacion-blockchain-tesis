@@ -1,6 +1,7 @@
 import React from "react";
 import { ROLE_CONFIG } from "../../constants/roles";
 import TransactionLog from "../ui/TransactionLog";
+import { NETWORK_LABEL } from "../../constants/network";
 
 export default function BlockchainBar({ connected, role, address, txLog, loading }) {
   const cfg = ROLE_CONFIG[role];
@@ -11,7 +12,7 @@ export default function BlockchainBar({ connected, role, address, txLog, loading
         <div className="flex items-center gap-2">
           <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${connected ? "bg-green-400 animate-pulse" : "bg-red-500"}`} />
           <span className="text-xs font-mono text-gray-300">
-            {connected ? "Hardhat local · localhost:8545" : "Sin conexión a Hardhat"}
+            {connected ? NETWORK_LABEL : "Sin conexión a la blockchain"}
           </span>
         </div>
 
