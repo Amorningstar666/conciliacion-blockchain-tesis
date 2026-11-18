@@ -15,9 +15,23 @@ const CLAVES_APP = ["pgn_conciliaciones_v1", "pgn_conciliadores_v1"];
 
 let _provider = null;
 
-async function cargarGanache() {
-  const mod = await import("ganache");
-  return mod.default ?? mod;
+// Ganache se carga desde CDN (no como dependencia npm: su paquete trae
+// binarios exclusivos de macOS que rompen `npm ci` en Linux).
+// El hash SRI garantiza que el archivo no fue alterado.
+const GANACHE_URL = "https://cdn.jsdelivr.net/npm/ganache@7.9.2/dist/web/ganache.min.js";
+const GANACHE_SRI = "sha384-7ZJuPSJycTVhi/25CY7DMzaD94WbBbDu4G0f8YzNRISN1guhFB9NpF8UlXf7ul6Y";
+
+function cargarGanache() {
+  if (window.Ganache) return Promise.resolve(window.Ganache);
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = GANACHE_URL;
+    script.integrity = GANACHE_SRI;
+    script.crossOrigin = "anonymous";
+    script.onload = () => resolve(window.Ganache);
+    script.onerror = () => reject(new Error("No se pudo cargar la red demo (Ganache)."));
+    document.head.appendChild(script);
+  });
 }
 
 // La red vive en memoria: al recargar la página empieza vacía,
